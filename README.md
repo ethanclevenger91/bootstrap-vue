@@ -39,3 +39,36 @@ Vue js        | 2.1.7
 Bootstrap | 4.0.0-alpha.5
 Webpack   | 2.2.0-rc.2
 
+```js
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue';
+
+// Globally register bootstrap-vue components
+Vue.use(BootstrapVue);
+```
+
+Or simply include js inside HTML templates: (CDN Powered by unpkg)
+
+```html
+<script src="https://unpkg.com/bootstrap-vue/dist/bootstrapVue.js"></script>
+```
+
+## Bootstrap CSS
+
+Because Bootstrap can be customized so heavily, this package does not include the Bootstrap CSS. You can load the bootstrap@4.0.0-alpha.5 CSS in several ways:
+* [Via CDN](https://v4-alpha.getbootstrap.com/getting-started/introduction/#quick-start)
+* Bundled with your own CSS
+* [Via npm or yarn](https://v4-alpha.getbootstrap.com/getting-started/download/#npm), using the [webpack css loader](https://github.com/webpack/css-loader), and including like this:
+```js
+import 'path/to/node_modules/bootstrap/dist/css/bootstrap.css'
+// OR
+import 'path/to/node_modules/bootstrap/dist/css/bootstrap-flex.css'
+```
+
+## Docs
+[Official Docs Website](https://bootstrap-vue.github.io/)
+
+## Credits
++ This project and docs were originally ported from the Vue 1.x version
+ [kzima/vuestrap-base-components](https://github.com/kzima/vuestrap-base-components)
+ , so original credit backs to him :)
