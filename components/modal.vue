@@ -8,6 +8,9 @@
         <div class="modal-content">
           <div class="modal-header">
             <slot name="modal-header"></slot>
+            <button v-if="closeButton" @click="hide" type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
           </div>
           <div class="modal-body">
             <slot name="modal-body"></slot>
@@ -43,6 +46,10 @@
       id: {
         type: String,
         default: 'default'
+      },
+      closeButton: {
+        type: Boolean,
+        default:true
       },
       size: {
         type: String,
